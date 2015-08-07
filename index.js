@@ -44,15 +44,19 @@ var reload = require('mod-reload');
     var newNode = new LinkedListNode(data);
     newNode.next = node.next;
     node.next = newNode;
+    return newNode;
   };
 
   LinkedList.prototype.append = function (data) {
     var tail = this.getTail();
-    this.insertAfter(data, tail);
+    if (tail === null) {
+      tail = this.sentinel;
+    }
+    return this.insertAfter(data, tail);
   };
 
   LinkedList.prototype.prepend = function (data) {
-    this.insertAfter(data, this.head);
+    return this.insertAfter(data, this.head);
   };
 
 
