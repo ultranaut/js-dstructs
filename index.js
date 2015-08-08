@@ -1,5 +1,5 @@
 'use strict';
-var reload = require('mod-reload');
+
 var _ = require('underscore');
 
 (function () {
@@ -60,12 +60,9 @@ var _ = require('underscore');
     return this.insertAfter(data, this.head);
   };
 
-
   var structures = {
-    reload: reload,
     LinkedList: LinkedList
   };
-
 
 
   // export as a Node module if we're in that environment
