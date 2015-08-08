@@ -14,7 +14,9 @@
     "index.js",
     "LICENSE"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
   "devDependencies": {
     "babel": "^5.8.21",
     "chai": "^3.2.0",

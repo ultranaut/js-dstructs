@@ -1,5 +1,6 @@
 'use strict';
 var reload = require('mod-reload');
+var _ = require('underscore');
 
 (function () {
 
