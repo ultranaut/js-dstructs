@@ -20,8 +20,8 @@ var _ = require('underscore');
     return this.sentinel.next === null;
   };
 
-  LinkedList.prototype.find = function (data) {
-    var node = this.sentinel.next;
+  LinkedList.prototype.find = function (data, head) {
+    var node = typeof head === 'undefined' ? this.sentinel.next : head;
     while (node !== null) {
       if (node.data === data) {
         break;
