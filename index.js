@@ -23,7 +23,7 @@ var _ = require('underscore');
   LinkedList.prototype.find = function (data, head) {
     var node = typeof head === 'undefined' ? this.sentinel.next : head;
     while (node !== null) {
-      if (node.data === data) {
+      if (_.isEqual(data, node.data)) {
         break;
       }
       node = node.next;
